@@ -1,0 +1,15 @@
+<ol>
+<li><a routerLink="/name">Name</a></li>
+<li> <a routerLink="/services">Services</a></li>
+</ol>
+
+<h1 *ngIf = 'appmessage'>{{message}}</h1>
+<div *ngFor = 'let list of applist'>
+  <ul>
+    <li>{{list.id}}</li>
+    <li>{{list.Name}}</li>
+  </ul>
+</div>
+
+<app-header></app-header>
+<router-outlet></router-outlet>
