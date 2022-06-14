@@ -10,18 +10,18 @@ export class AppComponent {
   message: string = 'Hello World';
   appmessage: boolean = true;
   name: string = 'Tej';
-  applist: any[] = [{
-    "id": "1",
-    "Name": "One"
-  },
-  {
-  "id": "2",
-  "Name": "Two"
-  }
-];
+//   applist: any[] = [{
+//     "id": "1",
+//     "Name": "One"
+//   },
+//   {
+//   "id": "2",
+//   "Name": "Two"
+//   }
+// ];
 constructor(){}
 
-setName (newName:string){
-  this.name=newName;
-}
+// setName (newName:string){
+//   this.name=newName;
+// }
 }

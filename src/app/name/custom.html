@@ -7,7 +7,7 @@
         <th>Director</th>
         <th>Release Date</th>
     
-    <tr *ngFor="let movie of movie; let i=index; let o=odd; let e=even;"[ngClass]="{odd:o, even:e}">
+    <tr *ngFor="let movie of movie; let i=index; custom: customfn;">
         <td>{{i}}</td>
         <td>{{movie.title}}</td>
         <td>{{movie.cast}}</td>

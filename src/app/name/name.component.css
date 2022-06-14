@@ -1,0 +1,22 @@
+.odd{
+    background-color: aqua;
+}
+.even{
+    background-color: blanchedalmond;
+}
+.first{
+    background-color: darkgoldenrod;
+}
+.last{
+    background-color: blanchedalmond;
+}
+table,th,td{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th{
+    background-color: chartreuse;
+}
+h2{
+    text-align: center;
+}

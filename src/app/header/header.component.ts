@@ -12,12 +12,14 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
   }
   @Input() name: string | undefined;
-  @Output() onNameChanged = new EventEmitter<string>();
+   @Output() onNameChanged = new EventEmitter<string>();
 
-  changeName(newName:string){
-    this.onNameChanged.emit(newName);
-  }
-click(word: string){
-  this.name=word;
-}
+//   changeName(newName:string){
+//     this.onNameChanged.emit(newName);
+//   }
+// click(word: string){
+//   this.name=word;
+// }
+
+
 }
