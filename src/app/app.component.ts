@@ -21,4 +21,7 @@ export class AppComponent {
 ];
 constructor(){}
 
+setName (newName:string){
+  this.name=newName;
+}
 }

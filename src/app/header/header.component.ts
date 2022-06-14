@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -6,10 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-name: string= "Hi ";
+//name: string= "Hi ";
   constructor() { }
 
   ngOnInit(): void {
+  }
+  @Input() name: string | undefined;
+  @Output() onNameChanged = new EventEmitter<string>();
+
+  changeName(newName:string){
+    this.onNameChanged.emit(newName);
   }
 click(word: string){
   this.name=word;
