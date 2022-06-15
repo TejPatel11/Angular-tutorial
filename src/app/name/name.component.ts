@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NameComponent implements OnInit {
 title:string = 'Some marvel Movies';
+poster: string = 'Enter the number to see the poster and the ratings of the movies';
+num:number | undefined;
   movie:movie[]=[
     {title:'Spiderman: No way home', director:'Jon Watts',cast:'Tom Holland, Zendaya, Andrew Garfield', releaseDate:'17 Dec 2021'},
     {title:'Avengers:Infinty war', director:'Joe Russo', cast:'Robert Downey Jr, Scarlett Johansson, Chris Evans', releaseDate:'25 April 2018'},

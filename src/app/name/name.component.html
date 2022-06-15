@@ -8,7 +8,7 @@
         <th>Release Date</th>
     
     <tr *ngFor="let movie of movie; let i=index; let o=odd; let e=even;"[ngClass]="{odd:o, even:e}">
-        <td>{{i}}</td>
+        <td>{{i+1}}</td>
         <td>{{movie.title}}</td>
         <td>{{movie.cast}}</td>
         <td>{{movie.director}}</td>
@@ -16,4 +16,37 @@
     </tr>
 
 </ul>
+<h3>{{poster}}</h3>
+<input type="text" [(ngModel)] = "num" placeholder="Enter the number">
+<div [ngSwitch]="num">
+   
+    <div *ngSwitchCase="1"><h3>You selected:</h3> {{movie[0].title}}</div>
+    <div *ngSwitchCase="2"><h3>You selected:</h3>{{movie[1].title}}</div>
+    
+    <div *ngSwitchCase="3"><h3>You selected:</h3>{{movie[2].title}}</div>
+    <div *ngSwitchCase="3"></div>
+    <div *ngSwitchCase="4"><h3>You selected:</h3>{{movie[3].title}}</div>
+    <div *ngSwitchCase="4"></div>
+    <div *ngSwitchDefault>Enter the correct number</div>
+  
+   <!-- <ng-container
+    *ngIf="num==1; then picture; else picture1">
+  </ng-container>
+  
+  <ng-template #picture>
+    <div>
+        <img src="assets/images/spiderman.jpg">
+    </div>
+  </ng-template>
+  <ng-template #picture1>
+    <div>
+        <img src="assets/images/avenger_infintywar.jpg">
+    </div>
+  </ng-template>
+-->
+    <div *ngIf="num==1"><img src="assets/images/spiderman.jpg"></div>
+    <div *ngIf="num==2"><img src="assets/images/avenger_infintywar.jpg"></div>
+    <div *ngIf="num==3"><img src="assets/images/avengers_endgame.jpg"></div>
+    <div *ngIf="num==4"><img src="assets/images/drstrange.jpg"></div>
 
+</div>
